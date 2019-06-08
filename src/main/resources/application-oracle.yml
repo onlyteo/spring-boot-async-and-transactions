@@ -1,0 +1,12 @@
+########################
+# SPRING Configuration #
+########################
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+  datasource:
+    platform: oracle
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@oracle.osl.teoworks.com:1521:XE
+    username: dummy
+    password: dummy

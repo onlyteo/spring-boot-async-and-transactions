@@ -1,0 +1,38 @@
+########################
+# SPRING Configuration #
+########################
+spring:
+  application:
+    name: spring-boot-async-and-transactions
+  profiles:
+    include:
+      - oracle
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+    default-property-inclusion: NON_NULL
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      adjust-dates-to-context-time-zone: false
+  jmx:
+    enabled: false
+  aop:
+    proxy-target-class: true
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+
+# Logging
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate: WARN
+    com.onlyteo: DEBUG
+
+# Server
+server:
+  port: 8080
+  servlet:
+    context-path: /api
